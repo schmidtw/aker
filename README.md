@@ -15,3 +15,16 @@ cmake ..
 make
 make test
 ```
+
+# Running Example
+
+Assumes that parodus is running at `tcp://127.0.0.1:6666`.  In this case the
+`--firewall-cli` is going to echo the MAC addresses.
+
+```
+$ ./aker --parodus-url tcp://127.0.0.1:6666 \
+         --client-url tcp://127.0.0.1:6600 \
+         --firewall-cli echo \
+         --data-file /tmp/aker-schedule.msgpack \
+         --md5-file /tmp/aker-schedule.md5
+```
